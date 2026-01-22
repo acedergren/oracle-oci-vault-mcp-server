@@ -1,0 +1,19 @@
+FROM python:3.13-slim
+
+WORKDIR /app
+
+# Install uv for faster dependency management
+RUN pip install --upgrade pip && pip install uv
+
+# Copy the project files
+COPY . .
+
+# Install the OCI Vault MCP Server
+RUN uv pip install --system -e .
+
+# Create a non-root user
+RUN useradd -m -u 1000 mcp_user
+USER mcp_user
+
+# Set the entrypoint
+ENTRYPOINT ["python", "-m", "oracle.oci_vault_mcp_server.server"]
