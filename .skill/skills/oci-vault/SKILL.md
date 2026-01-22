@@ -1,16 +1,18 @@
 ---
 name: oci-vault
-description: Manage secrets in Oracle Cloud Infrastructure Vault. Provides access to 12 MCP tools for complete secret lifecycle management including listing, searching, creating, updating, and deleting secrets. Use when working with OCI Vault credentials, API keys, or sensitive configuration data.
+description: Manage secrets in Oracle Cloud Infrastructure Vault via MCP. Provides 12 tools for complete secret lifecycle management including listing, searching, creating, updating, and deleting secrets. Compatible with any MCP-compatible client (Claude Desktop, Cursor, Cline, OpenCode, etc.). Use when working with OCI Vault credentials, API keys, or sensitive configuration data.
 license: UPL-1.0
 metadata:
   author: Oracle
   version: "1.0.0"
+  compatibility: MCP-universal
   tags:
     - secrets
     - vault
     - oci
     - key-management
     - mcp-server
+    - agent-agnostic
 ---
 
 # OCI Vault MCP Server
