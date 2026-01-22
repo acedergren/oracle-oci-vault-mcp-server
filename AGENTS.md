@@ -74,10 +74,10 @@ The MCP server provides 12 tools for complete secret lifecycle management:
 │       ├── setup-checklist.md             # 40+ point verification
 │       └── troubleshooting.md             # 30+ solutions
 │
-├── .opencode/                             # OpenCode-specific (optional)
+├── .skill/                                # MCP skill definition (agent-agnostic)
 │   └── skills/oci-vault/
-│       ├── SKILL.md                       # OpenCode skill definition
-│       └── references/                    # OpenCode references
+│       ├── SKILL.md                       # Universal skill definition
+│       └── references/                    # Quick reference materials
 │
 └── src/oci-vault-mcp-server/              # Server implementation
     ├── pyproject.toml                     # Python package config
@@ -122,7 +122,7 @@ Follow the setup guide at https://github.com/acedergren/oracle-oci-vault-mcp-ser
 - Reference [docs/agent-guides/quick-reference.md](./docs/agent-guides/quick-reference.md)
 
 **For OpenCode Users:**
-- Use [.opencode/skills/oci-vault/SKILL.md](./.opencode/skills/oci-vault/SKILL.md)
+- Use [.skill/skills/oci-vault/SKILL.md](./.skill/skills/oci-vault/SKILL.md) (agent-agnostic skill)
 - Reference [docs/client-setup/opencode-custom-commands.md](./docs/client-setup/opencode-custom-commands.md)
 
 ## Key Concepts
