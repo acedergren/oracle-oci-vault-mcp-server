@@ -580,16 +580,16 @@ def update_secret_metadata(
         secret = response.data
         logger.info(f"Updated secret metadata: {secret_id}")
 
-        return {
-            "status": "success",
-            "message": "Secret metadata updated successfully",
-            "secret_id": secret.id,
-            "name": secret.secret_name,
-            "description": secret.description,
-            "freeform_tags": secret.freeform_tags,
-            "defined_tags": secret.defined_tags,
-            "lifecycle_state": secret.lifecycle_state,
-        }
+        return UpdateSecretMetadataResponse(
+            status="success",
+            message="Secret metadata updated successfully",
+            secret_id=secret.id,
+            name=secret.secret_name,
+            description=secret.description,
+            freeform_tags=secret.freeform_tags,
+            defined_tags=secret.defined_tags,
+            lifecycle_state=secret.lifecycle_state,
+        )
 
     except Exception as e:
         logger.error(f"Error in update_secret_metadata tool: {str(e)}")
@@ -608,7 +608,7 @@ def delete_secret(
         ge=7,
         le=30,
     ),
-) -> dict:
+) -> DeleteSecretResponse:
     """Schedule a secret for deletion.
 
     Secrets in OCI Vault cannot be immediately deleted. They must be scheduled
@@ -633,16 +633,16 @@ def delete_secret(
         secret = response.data
         logger.info(f"Scheduled deletion for secret: {secret_id}")
 
-        return {
-            "status": "success",
-            "message": "Secret scheduled for deletion",
-            "secret_id": secret.id,
-            "name": secret.secret_name,
-            "lifecycle_state": secret.lifecycle_state,
-            "time_of_deletion": str(secret.time_of_deletion)
+        return DeleteSecretResponse(
+            status="success",
+            message="Secret scheduled for deletion",
+            secret_id=secret.id,
+            name=secret.secret_name,
+            lifecycle_state=secret.lifecycle_state,
+            time_of_deletion=str(secret.time_of_deletion)
             if secret.time_of_deletion
             else None,
-        }
+        )
 
     except Exception as e:
         logger.error(f"Error in delete_secret tool: {str(e)}")
