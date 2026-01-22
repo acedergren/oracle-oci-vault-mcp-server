@@ -3,21 +3,24 @@ name = "oci-vault-mcp-server"
 version = "1.0.0"
 description = "OCI Vault Service MCP server"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 license = "UPL-1.0"
 license-files = ["LICENSE.txt"]
 authors = [
     {name = "Oracle MCP", email = "237432095+oracle-mcp@users.noreply.github.com"},
 ]
 dependencies = [
-    "fastmcp==2.14.2",
-    "oci==2.160.0",
+    "fastmcp==2.14.4",
+    "oci==2.165.1",
 ]
 
 classifiers = [
     "License :: OSI Approved :: Universal Permissive License (UPL)",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
 ]
 mcpName = "io.acedergren/oci-vault"
