@@ -1,52 +1,48 @@
 ---
 name: oci-vault
-description: Manage secrets in Oracle Cloud Infrastructure Vault using the OCI Vault MCP Server
+description: Manage secrets in Oracle Cloud Infrastructure Vault. Provides access to 12 MCP tools for complete secret lifecycle management including listing, searching, creating, updating, and deleting secrets. Use when working with OCI Vault credentials, API keys, or sensitive configuration data.
 license: UPL-1.0
-compatibility: opencode
-allowed-tools:
-  - read
-  - bash
 metadata:
-  audience: developers
-  workflow: secrets-management
-  version: "1.0"
-  author: "Oracle"
-  keywords:
+  author: Oracle
+  version: "1.0.0"
+  tags:
     - secrets
     - vault
     - oci
     - key-management
-    - credentials
-  difficulty: intermediate
-  estimated_time: "5-15 minutes per operation"
+    - mcp-server
 ---
 
-## What I do
+# OCI Vault MCP Server
 
-I help you work with Oracle Cloud Infrastructure (OCI) Vault secrets through the OCI Vault MCP Server. I provide guidance on:
+Access and manage Oracle Cloud Infrastructure Vault secrets through the MCP (Model Context Protocol) server. This skill provides 12 tools for complete secret lifecycle management.
 
-- **Listing and Searching Secrets**: Find secrets by name or list all available secrets
-- **Retrieving Secrets**: Get secret metadata, values, and version history
-- **Creating Secrets**: Store new secrets with proper naming and organization
-- **Updating Secrets**: Create new versions of existing secrets and update metadata
-- **Deleting Secrets**: Schedule secrets for safe deletion (7-30 day retention)
-- **Configuration**: Set default vault and compartment for operations
-- **Authentication**: Configure OCI CLI authentication and credentials
-- **Best Practices**: Apply security best practices for secret management
+## Capabilities
 
-I leverage the OCI Vault MCP Server's 12 specialized tools to provide secure, auditable secret management across development, staging, and production environments.
+This skill enables you to:
 
-## When to use me
+- **List and Search Secrets**: Find secrets by name or list all available secrets in your vault
+- **Retrieve Secrets**: Get secret metadata, values, and complete version history
+- **Create Secrets**: Store new secrets with proper naming and organization in OCI Vault
+- **Update Secrets**: Create new versions of existing secrets and update metadata
+- **Delete Secrets**: Schedule secrets for safe deletion (7-30 day retention period)
+- **Configure Vault**: Set default vault and compartment IDs for your project
+- **Manage Authentication**: Configure OCI CLI credentials and handle authentication
+- **Apply Best Practices**: Implement security best practices for secret management
+
+The skill leverages the OCI Vault MCP Server's 12 specialized tools to provide secure, auditable secret management across development, staging, and production environments.
+
+## When to Use This Skill
 
 Use this skill when you need to:
 
-1. **Access secrets in OCI Vault**: Retrieve API keys, passwords, certificates, or other sensitive data
-2. **Create new secrets**: Store new credentials, tokens, or sensitive configuration
-3. **Manage secret versions**: Update secrets and maintain version history
-4. **Configure vault access**: Set up default vault/compartment IDs for your project
-5. **Understand OCI Vault concepts**: Learn about secret lifecycle, versions, and metadata
-6. **Debug authentication issues**: Troubleshoot OCI CLI connection problems
-7. **Implement secure workflows**: Follow best practices for storing and accessing secrets
+1. **Access secrets in OCI Vault** - Retrieve API keys, passwords, certificates, or other sensitive data
+2. **Create new secrets** - Store new credentials, tokens, or sensitive configuration
+3. **Manage secret versions** - Update secrets and maintain version history
+4. **Configure vault access** - Set up default vault and compartment IDs for your operations
+5. **Understand OCI Vault concepts** - Learn about secret lifecycle, versions, and metadata
+6. **Debug authentication issues** - Troubleshoot OCI CLI connection problems
+7. **Implement secure workflows** - Follow best practices for storing and accessing secrets
 
 ## Getting Started
 
