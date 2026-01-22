@@ -22,7 +22,7 @@ This guide walks you through setting up the OCI Vault MCP server with Cursor IDE
      "servers": {
        "oci-vault": {
          "command": "uvx",
-         "args": ["oracle.oci-vault-mcp-server"],
+         "args": ["oci-vault-mcp-server"],
          "env": {
            "OCI_CLI_PROFILE": "default"
          }
@@ -66,10 +66,10 @@ oci vault secret list --compartment-id <your-compartment-id>
 
 ```bash
 # Option 1: Install from PyPI (Recommended)
-pip install oracle.oci-vault-mcp-server
+pip install oci-vault-mcp-server
 
 # Option 2: Use directly with uv (no installation needed)
-uvx oracle.oci-vault-mcp-server
+uvx oci-vault-mcp-server
 
 # Option 3: Use Docker
 docker pull oracle/oci-vault-mcp-server:latest
@@ -86,7 +86,7 @@ docker pull oracle/oci-vault-mcp-server:latest
 5. Fill in:
    - **Name**: `oci-vault`
    - **Command**: `uvx`
-   - **Arguments**: `["oracle.oci-vault-mcp-server"]`
+   - **Arguments**: `["oci-vault-mcp-server"]`
    - **Environment**: `{"OCI_CLI_PROFILE": "default"}`
 
 **Method B: Edit Config File Directly**
@@ -114,7 +114,7 @@ Add or edit to include:
   "servers": {
     "oci-vault": {
       "command": "uvx",
-      "args": ["oracle.oci-vault-mcp-server"],
+      "args": ["oci-vault-mcp-server"],
       "env": {
         "OCI_CLI_PROFILE": "default",
         "OCI_CONFIG_PATH": "~/.oci/config"
@@ -190,7 +190,7 @@ Configure different OCI profiles for different environments:
   "servers": {
     "oci-vault-prod": {
       "command": "uvx",
-      "args": ["oracle.oci-vault-mcp-server"],
+      "args": ["oci-vault-mcp-server"],
       "env": {
         "OCI_CLI_PROFILE": "production",
         "OCI_CONFIG_PATH": "~/.oci/config"
@@ -198,14 +198,14 @@ Configure different OCI profiles for different environments:
     },
     "oci-vault-dev": {
       "command": "uvx",
-      "args": ["oracle.oci-vault-mcp-server"],
+      "args": ["oci-vault-mcp-server"],
       "env": {
         "OCI_CLI_PROFILE": "development"
       }
     },
     "oci-vault-staging": {
       "command": "uvx",
-      "args": ["oracle.oci-vault-mcp-server"],
+      "args": ["oci-vault-mcp-server"],
       "env": {
         "OCI_CLI_PROFILE": "staging"
       }
@@ -327,7 +327,7 @@ Edit `.vscode/keybindings.json` in your project:
 1. Ensure Node.js is installed: `which node`
 2. Install uv: `npm install -g uv` or `pipx install uv`
 3. Restart Cursor
-4. Test manually: `uvx oracle.oci-vault-mcp-server --help`
+4. Test manually: `uvx oci-vault-mcp-server --help`
 
 ### Issue: "Permission Denied" on OCI Operations
 
@@ -359,7 +359,7 @@ Edit `.vscode/keybindings.json` in your project:
 1. Enable debug logging (see Advanced Configuration)
 2. Check Cursor logs: View → Output → Cursor
 3. Verify Python installation: `python3 --version` (should be 3.13+)
-4. Reinstall server: `pip install --force-reinstall oracle.oci-vault-mcp-server`
+4. Reinstall server: `pip install --force-reinstall oci-vault-mcp-server`
 
 ### Issue: Secrets Not Appearing
 

@@ -14,7 +14,7 @@ Edit your OpenCode configuration file (typically in your workspace settings or `
     {
       "name": "vault-list-secrets",
       "description": "List all secrets in the vault",
-      "command": "List all secrets in OCI Vault using the oracle.oci-vault-mcp-server tool",
+      "command": "List all secrets in OCI Vault using the oci-vault-mcp-server tool",
       "category": "vault"
     },
     {

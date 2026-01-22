@@ -36,7 +36,7 @@ Add the following to your `claude_desktop_config.json` under the `mcpServers` se
   "mcpServers": {
     "oci-vault": {
       "command": "uvx",
-      "args": ["oracle.oci-vault-mcp-server"],
+      "args": ["oci-vault-mcp-server"],
       "env": {
         "OCI_CLI_PROFILE": "default",
         "OCI_CONFIG_PATH": "~/.oci/config"
@@ -55,7 +55,7 @@ If you use multiple OCI profiles, customize the configuration:
   "mcpServers": {
     "oci-vault": {
       "command": "uvx",
-      "args": ["oracle.oci-vault-mcp-server"],
+      "args": ["oci-vault-mcp-server"],
       "env": {
         "OCI_CLI_PROFILE": "your-profile-name",
         "OCI_CONFIG_PATH": "~/.oci/config"
@@ -85,7 +85,7 @@ Claude should respond that the OCI Vault MCP server is available and ready to us
 ### Troubleshooting Claude Desktop
 
 **"MCP Server not found" error**
-- Verify `oracle.oci-vault-mcp-server` is installed: `pip list | grep oracle`
+- Verify `oci-vault-mcp-server` is installed: `pip list | grep oracle`
 - Check the config file path is correct
 - Restart Claude Desktop
 
@@ -108,7 +108,7 @@ Claude Web doesn't directly support MCP servers, but you can use an MCP proxy se
 1. **Set up a local MCP proxy**:
    ```bash
    pip install mcp-bridge
-   mcp-bridge --server oracle.oci-vault-mcp-server --port 3000
+   mcp-bridge --server oci-vault-mcp-server --port 3000
    ```
 
 2. **Access Claude Web at**: `http://localhost:3000`
@@ -225,7 +225,7 @@ Then in config:
   "mcpServers": {
     "oci-vault": {
       "command": "uvx",
-      "args": ["oracle.oci-vault-mcp-server"],
+      "args": ["oci-vault-mcp-server"],
       "env": {
         "OCI_VAULT_COMPARTMENT_ID": "${OCI_VAULT_COMPARTMENT_ID}",
         "OCI_VAULT_VAULT_ID": "${OCI_VAULT_VAULT_ID}"

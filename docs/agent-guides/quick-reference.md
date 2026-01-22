@@ -154,7 +154,7 @@ oci vault vault list --compartment-id=$OCI_COMPARTMENT_ID
 oci vault secret list --vault-id=$OCI_VAULT_ID --limit=1
 
 # Enable debug logging
-FASTMCP_LOG_LEVEL=DEBUG uvx oracle.oci-vault-mcp-server
+FASTMCP_LOG_LEVEL=DEBUG uvx oci-vault-mcp-server
 ```
 
 ## Tips & Tricks

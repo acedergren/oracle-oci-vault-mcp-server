@@ -42,7 +42,7 @@ Complete setup instructions for integrating OCI Vault MCP with your favorite AI 
 # 2. Go to Cline settings → MCP Servers → Add Server
 # 3. Name: oci-vault
 # 4. Command: uvx
-# 5. Args: ["oracle.oci-vault-mcp-server"]
+# 5. Args: ["oci-vault-mcp-server"]
 # 6. Done! Ask Cline about your secrets
 ```
 
@@ -70,7 +70,7 @@ Complete setup instructions for integrating OCI Vault MCP with your favorite AI 
   "mcpServers": {
     "oci-vault": {
       "command": "uvx",
-      "args": ["oracle.oci-vault-mcp-server"],
+      "args": ["oci-vault-mcp-server"],
       "env": {
         "OCI_CLI_PROFILE": "default"
       }
@@ -102,7 +102,7 @@ Complete setup instructions for integrating OCI Vault MCP with your favorite AI 
   "servers": {
     "oci-vault": {
       "command": "uvx",
-      "args": ["oracle.oci-vault-mcp-server"],
+      "args": ["oci-vault-mcp-server"],
       "env": { "OCI_CLI_PROFILE": "default" }
     }
   }
@@ -206,9 +206,9 @@ python3 --version  # Should be 3.13 or higher
 
 ### 3. Oracle OCI Vault MCP Server
 ```bash
-pip install oracle.oci-vault-mcp-server
+pip install oci-vault-mcp-server
 # or
-uvx oracle.oci-vault-mcp-server
+uvx oci-vault-mcp-server
 ```
 
 ### 4. Valid OCI Credentials
@@ -219,7 +219,7 @@ uvx oracle.oci-vault-mcp-server
 ## Troubleshooting by Platform
 
 ### VS Code / Cline Issues
-- **Server not found**: Ensure `oracle.oci-vault-mcp-server` is installed
+- **Server not found**: Ensure `oci-vault-mcp-server` is installed
 - **Permission denied**: Check OCI CLI setup with `oci setup config`
 - **Timeout**: Verify network connectivity to OCI services
 
@@ -249,16 +249,16 @@ uvx oracle.oci-vault-mcp-server
 ### Method 1: PyPI Package (Recommended)
 ```bash
 # Install from Python Package Index
-pip install oracle.oci-vault-mcp-server
+pip install oci-vault-mcp-server
 
 # Use anywhere with:
-uvx oracle.oci-vault-mcp-server
+uvx oci-vault-mcp-server
 ```
 
 ### Method 2: uv/npm (Zero Setup)
 ```bash
 # No installation needed! Run directly:
-uvx oracle.oci-vault-mcp-server
+uvx oci-vault-mcp-server
 ```
 
 ### Method 3: Docker Container
@@ -292,12 +292,12 @@ python -m oracle.oci_vault_mcp_server.server
   "mcpServers": {
     "oci-vault-prod": {
       "command": "uvx",
-      "args": ["oracle.oci-vault-mcp-server"],
+      "args": ["oci-vault-mcp-server"],
       "env": { "OCI_CLI_PROFILE": "production" }
     },
     "oci-vault-dev": {
       "command": "uvx",
-      "args": ["oracle.oci-vault-mcp-server"],
+      "args": ["oci-vault-mcp-server"],
       "env": { "OCI_CLI_PROFILE": "development" }
     }
   }

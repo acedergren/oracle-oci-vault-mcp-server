@@ -345,13 +345,13 @@ compartment_id is required. Either provide compartment_id parameter or set OCI_C
 
 2. Restart the server:
    ```bash
-   killall oracle.oci-vault-mcp-server
+   killall oci-vault-mcp-server
    # Or restart your MCP client/harness
    ```
 
 3. Check server logs for errors:
    ```bash
-   FASTMCP_LOG_LEVEL=DEBUG uvx oracle.oci-vault-mcp-server
+   FASTMCP_LOG_LEVEL=DEBUG uvx oci-vault-mcp-server
    ```
 
 ---
@@ -365,7 +365,7 @@ compartment_id is required. Either provide compartment_id parameter or set OCI_C
 
 2. Restart the MCP server to reload tools
 
-3. Check your MCP client configuration includes the oracle.oci-vault-mcp-server entry
+3. Check your MCP client configuration includes the oci-vault-mcp-server entry
 
 ---
 

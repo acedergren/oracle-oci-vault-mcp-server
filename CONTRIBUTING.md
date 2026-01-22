@@ -78,7 +78,7 @@ export OCI_VAULT_ID="ocid1.vault.oc1.phx.xxxxx"
 export OCI_COMPARTMENT_ID="ocid1.compartment.oc1.xxxxx"
 export FASTMCP_LOG_LEVEL=DEBUG
 
-uvx oracle.oci-vault-mcp-server
+uvx oci-vault-mcp-server
 ```
 
 ### Code Quality

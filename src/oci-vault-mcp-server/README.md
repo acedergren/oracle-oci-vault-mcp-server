@@ -14,13 +14,13 @@ This server provides tools for interacting with Oracle Cloud Infrastructure (OCI
 ### STDIO transport mode
 
 ```sh
-uvx oracle.oci-vault-mcp-server
+uvx oci-vault-mcp-server
 ```
 
 ### HTTP streaming transport mode
 
 ```sh
-ORACLE_MCP_HOST=<hostname/IP address> ORACLE_MCP_PORT=<port number> uvx oracle.oci-vault-mcp-server
+ORACLE_MCP_HOST=<hostname/IP address> ORACLE_MCP_PORT=<port number> uvx oci-vault-mcp-server
 ```
 
 ## Configuration
@@ -34,7 +34,7 @@ Set these environment variables before starting the server:
 ```bash
 export OCI_VAULT_ID="ocid1.vault.oc1.phx.xxxxx"
 export OCI_COMPARTMENT_ID="ocid1.compartment.oc1.xxxxx"
-uvx oracle.oci-vault-mcp-server
+uvx oci-vault-mcp-server
 ```
 
 ### 2. MCP Settings File (Recommended)
@@ -49,7 +49,7 @@ Configure the vault details in your MCP client settings file (e.g., `cline_mcp_s
       "type": "stdio",
       "command": "uvx",
       "args": [
-        "oracle.oci-vault-mcp-server@latest"
+        "oci-vault-mcp-server@latest"
       ],
       "env": {
         "OCI_CONFIG_PROFILE": "<profile_name>",
@@ -70,7 +70,7 @@ Configure the vault details in your MCP client settings file (e.g., `cline_mcp_s
       "type": "stdio",
       "command": "uvx",
       "args": [
-        "oracle.oci-vault-mcp-server@latest"
+        "oci-vault-mcp-server@latest"
       ],
       "env": {
         "OCI_CONFIG_PROFILE": "<profile_name>",
@@ -407,7 +407,7 @@ oci session authenticate --region=<region> --tenancy-name=<tenancy_name>
 The server will use the OCI credentials from your `~/.oci/config` file. You can specify a different profile using the `OCI_CONFIG_PROFILE` environment variable:
 
 ```bash
-OCI_CONFIG_PROFILE=<profile_name> uvx oracle.oci-vault-mcp-server
+OCI_CONFIG_PROFILE=<profile_name> uvx oci-vault-mcp-server
 ```
 
 ⚠️ **NOTE**: All actions are performed with the permissions of the configured OCI CLI profile. We advise least-privilege IAM setup, secure credential management, safe network practices, secure logging, and warn against exposing secrets.

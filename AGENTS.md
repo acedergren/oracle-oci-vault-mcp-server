@@ -14,7 +14,7 @@ The server is available as an MCP tool for any MCP-compatible client:
 
 **Installation:**
 ```bash
-pip install oracle.oci-vault-mcp-server
+pip install oci-vault-mcp-server
 ```
 
 **Configuration:**
@@ -24,7 +24,7 @@ Add to your MCP client configuration (Claude Desktop, Cursor, Cline, etc.):
   "mcpServers": {
     "oci-vault": {
       "command": "uvx",
-      "args": ["oracle.oci-vault-mcp-server"],
+      "args": ["oci-vault-mcp-server"],
       "env": { "OCI_CLI_PROFILE": "default" }
     }
   }
@@ -89,7 +89,7 @@ The MCP server provides 12 tools for complete secret lifecycle management:
 
 **For Claude/Cline Users:**
 ```
-"I can help you manage OCI Vault secrets. The oracle.oci-vault-mcp-server
+"I can help you manage OCI Vault secrets. The oci-vault-mcp-server
 provides direct access to your secrets. Let me help you set it up."
 ```
 
@@ -107,7 +107,7 @@ you how to use custom commands like /vault-list-secrets."
 
 **For Any Agent:**
 ```
-"You can use the oracle.oci-vault-mcp-server with any MCP-compatible client.
+"You can use the oci-vault-mcp-server with any MCP-compatible client.
 Follow the setup guide at https://github.com/acedergren/oracle-oci-vault-mcp-server"
 ```
 

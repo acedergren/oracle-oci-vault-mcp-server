@@ -1,5 +1,5 @@
 [project]
-name = "oracle.oci-vault-mcp-server"
+name = "oci-vault-mcp-server"
 version = "1.0.0"
 description = "OCI Vault Service MCP server"
 readme = "README.md"
@@ -20,13 +20,13 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3.13",
 ]
-mcpName = "io.oracle/oci-vault"
+mcpName = "io.acedergren/oci-vault"
 
 [project.urls]
-"Repository" = "https://github.com/oracle/mcp"
+"Repository" = "https://github.com/acedergren/oracle-oci-vault-mcp-server"
 
 [project.scripts]
-"oracle.oci-vault-mcp-server" = "oracle.oci_vault_mcp_server.server:main"
+"oci-vault-mcp-server" = "oracle.oci_vault_mcp_server.server:main"
 
 [build-system]
 requires = ["hatchling"]

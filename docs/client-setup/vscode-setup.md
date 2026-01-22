@@ -38,7 +38,7 @@ saoudrizwan.claude-dev
 
 **Arguments**:
 ```json
-["oracle.oci-vault-mcp-server"]
+["oci-vault-mcp-server"]
 ```
 
 **Environment Variables**:
@@ -84,7 +84,7 @@ Cursor IDE has built-in MCP support. To configure:
    {
      "name": "oci-vault",
      "command": "uvx",
-     "args": ["oracle.oci-vault-mcp-server"],
+     "args": ["oci-vault-mcp-server"],
      "env": {
        "OCI_CLI_PROFILE": "default"
      }
@@ -109,7 +109,7 @@ Create or edit `.vscode/settings.json` in your project:
   "cline.mcpServers": {
     "oci-vault": {
       "command": "uvx",
-      "args": ["oracle.oci-vault-mcp-server"],
+      "args": ["oci-vault-mcp-server"],
       "env": {
         "OCI_CLI_PROFILE": "default",
         "OCI_CONFIG_PATH": "~/.oci/config"
@@ -204,7 +204,7 @@ Then check VS Code's Output panel (View → Output → Cline)
 ### Common Issues
 
 **"MCP Server not responding"**
-- Verify `oracle.oci-vault-mcp-server` is installed: `pip list | grep oracle`
+- Verify `oci-vault-mcp-server` is installed: `pip list | grep oracle`
 - Check OCI credentials: `oci vault secret list --compartment-id <id>`
 - Restart VS Code
 

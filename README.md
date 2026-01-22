@@ -22,12 +22,12 @@ An MCP (Model Context Protocol) server that provides AI assistants and code edit
 ### 1. Install
 
 ```bash
-pip install oracle.oci-vault-mcp-server
+pip install oci-vault-mcp-server
 ```
 
 Or use directly without installation:
 ```bash
-uvx oracle.oci-vault-mcp-server
+uvx oci-vault-mcp-server
 ```
 
 ### 2. Configure OCI
@@ -58,12 +58,12 @@ Ask your AI: "Can you list all secrets in my OCI Vault?"
 
 ### PyPI Package (Recommended)
 ```bash
-pip install oracle.oci-vault-mcp-server
+pip install oci-vault-mcp-server
 ```
 
 ### Direct Execution (No Install Required)
 ```bash
-uvx oracle.oci-vault-mcp-server
+uvx oci-vault-mcp-server
 ```
 
 ### Docker Container
